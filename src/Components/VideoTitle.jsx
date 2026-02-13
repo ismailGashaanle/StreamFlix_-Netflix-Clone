@@ -45,7 +45,7 @@ const VideoTitle = ({ overview, title, poster_path }) => {
   if (!movie || movie.length === 0) return null
 
   return (
-    <div className="absolute text-white top-0  bg-black opacity-80 w-full h-full flex flex-col justify-center p-4 sm:p-8 md:p-12">
+    <div className="absolute text-white top-0  bg-black opacity-60 w-full h-full flex flex-col justify-center p-4 sm:p-8 md:p-12">
       <div className="flex flex-col sm:flex-col items-start sm:items-start gap-4 sm:gap-8">
         <div className="w-1/2 sm:w-1/6">
           <img

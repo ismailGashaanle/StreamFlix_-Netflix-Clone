@@ -24,7 +24,7 @@ const MovieCard = ({poster_path,VideoMovieKey}) => {
     <>
 
     <div className='py-2'>
-    <img onClick={handleMovieCard}  className=' cursor-pointer border-1 border-gray-500 shadow-lg w-[150px] rounded-lg ' src={Image_CDN+poster_path} />
+    <img onClick={handleMovieCard}  className=' cursor-pointer border-1 border-gray-500 shadow-lg w-[100px] sm:w-[150px] rounded-lg ' src={Image_CDN+poster_path} />
     </div>
 
 {

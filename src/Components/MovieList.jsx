@@ -8,7 +8,7 @@ const MovieList = ({title,movies,VideoMovieKey}) => {
 
     <>
      <div className='py-6   '>
-        <h1 className='text-3xl text-white'>{title}</h1>
+        <h1 className=' text-lg sm:text-3xl text-white'>{title}</h1>
 
         <div className='flex mt-10  overflow-x-scroll   w-screen gap-4' >
             
