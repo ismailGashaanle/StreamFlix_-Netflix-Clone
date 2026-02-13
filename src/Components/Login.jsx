@@ -104,60 +104,156 @@ await updateProfile(auth.currentUser, {
    
  
 
-  return (
-    <div>
+//   return (
+//     <div>
 
-        <div className=''>
- <img src={background_Image}
-w-screen h-screen bg-cover bg-center
-  />
+//         <div className=''>
+//  <img src={background_Image}
+// w-screen h-screen bg-cover bg-center
+//   />
 
-<div className='relative'>
-   <div className='bg-black opacity-90 p-4 rounded-lg text-white sm:w-screen md:w-5/12 absolute top-0 -mt-[680px] left-[32%] h-auto '>
-   <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col gap-2'>
-    <span className='px-2 text-3xl mb-2 mt-2 capitalize font-bold'>{checkLogin?"sign up now":"sign in"}</span>
+// <div className='relative'>
+//    <div className='bg-black opacity-90 p-4 rounded-lg text-white sm:w-screen md:w-5/12 absolute top-0 -mt-[680px] left-[32%] h-auto '>
+//    <form onSubmit={(e)=>e.preventDefault()}  className='flex flex-col gap-2'>
+//     <span className='px-2 text-3xl mb-2 mt-2 capitalize font-bold'>{checkLogin?"sign up now":"sign in"}</span>
    
-   {checkLogin &&
-   <div className='flex flex-col p-2 gap-2'>
-   <label className='text-lg'>Name</label>
-    <input ref={Name} className='bg-gray-900 p-2 py-3' placeholder='Enter Name' />
-</div>
-   }
-<div className='flex flex-col p-2 gap-2'>
-   <label className='text-lg'>Email</label>
-    <input ref={email} className='bg-gray-900 p-2 py-3' placeholder='Enter email' />
-</div>
-<div className='flex flex-col p-2 gap-2'>
-   <label className='text-lg'>password</label>
-    <input ref={password} placeholder='*******' className='bg-gray-900 p-2 py-3' type='password' />
-</div>
+//    {checkLogin &&
+//    <div className='flex flex-col p-2 gap-2'>
+//    <label className='text-lg'>Name</label>
+//     <input ref={Name} className='bg-gray-900 p-2 py-3' placeholder='Enter Name' />
+// </div>
+//    }
+// <div className='flex flex-col p-2 gap-2'>
+//    <label className='text-lg'>Email</label>
+//     <input ref={email} className='bg-gray-900 p-2 py-3' placeholder='Enter email' />
+// </div>
+// <div className='flex flex-col p-2 gap-2'>
+//    <label className='text-lg'>password</label>
+//     <input ref={password} placeholder='*******' className='bg-gray-900 p-2 py-3' type='password' />
+// </div>
 
-{checkLogin&& <div className='flex flex-col p-2 gap-2'>
-   <label className='text-lg'>confirm password</label>
-    <input ref={confirmpassword} placeholder='*******' className='bg-gray-900 p-2 py-3' type='password' />
-</div>}
+// {checkLogin&& <div className='flex flex-col p-2 gap-2'>
+//    <label className='text-lg'>confirm password</label>
+//     <input ref={confirmpassword} placeholder='*******' className='bg-gray-900 p-2 py-3' type='password' />
+// </div>}
 
-<span className='text-red-600 px-2 text-lg capitalize'>{errorMessage}</span>
+// <span className='text-red-600 px-2 text-lg capitalize'>{errorMessage}</span>
      
-<button className='p-2 py-3 cursor-pointer bg-red-500 text-white rounded-lg'
-onClick={handleform}
+// <button className='p-2 py-3 cursor-pointer bg-red-500 text-white rounded-lg'
+// onClick={handleform}
 
-> {checkLogin?"Sign Up now":"sign in"} </button>
+// > {checkLogin?"Sign Up now":"sign in"} </button>
 
-<p>
-<span>  Al ready user exit</span>
+// <p>
+// <span>  Al ready user exit</span>
 
- <span className='mx-2 cursor-pointer text-lg'
- onClick={OnhandleLogin}
- > {checkLogin?"sign in":"Sign up now"} </span>
-</p>
-  </form>
+//  <span className='mx-2 cursor-pointer text-lg'
+//  onClick={OnhandleLogin}
+//  > {checkLogin?"sign in":"Sign up now"} </span>
+// </p>
+//   </form>
  
- </div>
-</div>
-        </div>
+//  </div>
+// </div>
+//         </div>
+//     </div>
+//   )
+
+return (
+  <div className="relative w-full h-screen">
+    {/* Background Image */}
+    <img 
+      src={background_Image} 
+      alt="background"
+      className="w-full h-full object-cover object-center"
+    />
+
+    {/* Form Container */}
+    <div className="absolute lg:-mt-30 inset-0 flex justify-center items-start pt-10 sm:pt-20 md:pt-32 lg:pt-40 xl:pt-48">
+      <div className="bg-black bg-opacity-90 p-4 sm:p-6 md:p-8 rounded-lg text-white w-11/12 sm:w-3/4 md:w-6/12 lg:w-5/12 xl:w-4/12">
+        <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-4">
+          
+          {/* Title */}
+          <span className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
+            {checkLogin ? "Sign up now" : "Sign in"}
+          </span>
+
+          {/* Name Field */}
+          {checkLogin && (
+            <div className="flex flex-col gap-2">
+              <label className="text-lg sm:text-xl">Name</label>
+              <input 
+                ref={Name} 
+                className="bg-gray-900 p-2 py-3 sm:py-3 rounded text-white text-sm sm:text-base" 
+                placeholder="Enter Name" 
+              />
+            </div>
+          )}
+
+          {/* Email Field */}
+          <div className="flex flex-col gap-2">
+            <label className="text-lg sm:text-xl">Email</label>
+            <input 
+              ref={email} 
+              className="bg-gray-900 p-2 py-3 sm:py-3 rounded text-white text-sm sm:text-base" 
+              placeholder="Enter email" 
+            />
+          </div>
+
+          {/* Password Field */}
+          <div className="flex flex-col gap-2">
+            <label className="text-lg sm:text-xl">Password</label>
+            <input 
+              ref={password} 
+              type="password" 
+              className="bg-gray-900 p-2 py-3 sm:py-3 rounded text-white text-sm sm:text-base" 
+              placeholder="*******" 
+            />
+          </div>
+
+          {/* Confirm Password */}
+          {checkLogin && (
+            <div className="flex flex-col gap-2">
+              <label className="text-lg sm:text-xl">Confirm Password</label>
+              <input 
+                ref={confirmpassword} 
+                type="password" 
+                className="bg-gray-900 p-2 py-3 sm:py-3 rounded text-white text-sm sm:text-base" 
+                placeholder="*******" 
+              />
+            </div>
+          )}
+
+          {/* Error Message */}
+          <span className="text-red-600 text-sm sm:text-base">{errorMessage}</span>
+
+          {/* Submit Button */}
+          <button 
+            className="bg-red-500 text-white py-3 sm:py-3 rounded-lg cursor-pointer text-sm sm:text-base"
+            onClick={handleform}
+          >
+            {checkLogin ? "Sign Up now" : "Sign in"}
+          </button>
+
+          {/* Switch Login/Signup */}
+          <p className="text-sm sm:text-base mt-2">
+            <span>Already a user?</span>
+            <span 
+              className="mx-2 cursor-pointer text-base sm:text-lg underline"
+              onClick={OnhandleLogin}
+            >
+              {checkLogin ? "Sign in" : "Sign up now"}
+            </span>
+          </p>
+
+        </form>
+      </div>
     </div>
-  )
+  </div>
+);
+
+
+
 }
 
 export default Login
