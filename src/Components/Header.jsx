@@ -40,7 +40,7 @@ signOut(auth).then(() => {
   return (
    
  
- <div className='flex justify-between items-center gap-2 w-screen bg-black opacity-95 rounded-sm  sticky top-0 z-50  '>
+ <div className='flex justify-between items-center gap-2 w-screen bg-black opacity-95 rounded-sm  sticky top-0 z-50 shadow-lg ring-1 ring-gray-800  '>
       <img
    className='w-20 h-20 '
    src={Logo_Header}

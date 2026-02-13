@@ -14,9 +14,9 @@ const SecondaryContainer = () => {
  usePopularMovies()
      
   return (
-    <div className='bg-opacity-85 z-30 bg-black bg-transparent-t  py-6 mt-16'>
+    <div className='bg-opacity-85 z-30 bg-black bg-transparent-t  py-6 '>
 
-        <MovieList title={"now playing Movie"} movies={movies} VideoMovieKey={VideoMovieKey} />
+        <MovieList className="-mt-90" title={"now playing Movie"} movies={movies} VideoMovieKey={VideoMovieKey} />
         <MovieList title={"now playing Movie"} movies={movies} VideoMovieKey={VideoMovieKey} />
         <MovieList title={"now playing Movie"} movies={movies} VideoMovieKey={VideoMovieKey} />
         <MovieList title={"now playing Movie"} movies={movies} VideoMovieKey={VideoMovieKey} />
