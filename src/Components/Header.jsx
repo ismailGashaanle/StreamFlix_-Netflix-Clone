@@ -59,7 +59,7 @@ signOut(auth).then(() => {
  
    {user?.displayName && (
   <span className="text-lg text-white bg-red-600 p-4 rounded-full">
-    {user.displayName}
+    {user.displayName.slice(0,2)}
   </span>
 )}
  
